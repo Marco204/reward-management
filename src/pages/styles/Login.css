@@ -1,0 +1,96 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #3f7f99;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #3f7f99;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357f93;
+  }
+  
+  button:active {
+    background-color: #31657d;
+  }
+  
+  .toast-container {
+    font-size: 16px;
+    z-index: 9999;
+  }
+  
+  /* Toast container customization */
+  .toastify__toast--success {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  .toastify__toast--error {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .login-container {
+      padding: 20px 15px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }
+  
