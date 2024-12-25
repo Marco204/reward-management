@@ -1,8 +1,10 @@
-const express = require('express');
+// routes/report.js
+import express from 'express';
+import Reward from '../models/Reward.js'; // Importing Reward model
+import { verifyToken, authorizeRole } from '../middleware/auth.js'; // Importing named exports
+import Report from '../models/Report.js';  // Importing default export from Report model
+
 const router = express.Router();
-const Reward = require('../models/Reward');
-const { verifyToken, authorizeRole } = require('../middleware/auth');
-const Report = require('../models/Report');
 
 // جلب تقرير شهري (Monthly report)
 router.get(
@@ -71,4 +73,4 @@ router.get('/', verifyToken, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;  // Default export for the router

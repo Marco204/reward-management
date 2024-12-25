@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import './styles/Dashboard.css';
 
-
-
 const Dashboard = () => {
   const [rewards, setRewards] = useState([]);
   const [error, setError] = useState('');

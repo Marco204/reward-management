@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // Reward schema
 const rewardSchema = new mongoose.Schema({
@@ -21,6 +21,9 @@ const rewardSchema = new mongoose.Schema({
     enum: ['Pending', 'Approved', 'Rejected'], // Status values are consistent
     default: 'Pending',
   },
+  reason:{
+    type:String
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User', // Reference to the User model
@@ -31,4 +34,4 @@ const rewardSchema = new mongoose.Schema({
 // Create the Reward model
 const Reward = mongoose.model('Reward', rewardSchema);
 
-module.exports = Reward;
+export default Reward;

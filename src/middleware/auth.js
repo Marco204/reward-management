@@ -1,13 +1,12 @@
 // middleware/auth.js
-const jwt = require('jsonwebtoken');
-
+import jwt from 'jsonwebtoken';
 // التحقق من التوكن
 const verifyToken = (req, res, next) => {
   const token = req.header('Authorization')?.split(' ')[1];
   if (!token) return res.status(403).json({ message: 'Access denied' });
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token,"asdnljfsadfdjslfiowejfipjfifasnjdifjasof;ljewpofjw;lakfjwadf");
     req.user = decoded;
     next();
   } catch (err) {
@@ -23,4 +22,5 @@ const authorizeRole = (roles) => (req, res, next) => {
   next();
 };
 
-module.exports = { verifyToken, authorizeRole };
+// Exporting using named exports
+export { verifyToken, authorizeRole };
